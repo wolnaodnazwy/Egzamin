@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form id = "kalkulator">
+        <input type="text" name="liczba1" value=""><br />
+        
+        <input type="text" name="liczba2" value=""><br />
+        <button type="button" name="plus" onclick="dodawanie()">+</button>"
+        <button type="button" name="minus" onclick="odejmowanie()">-</button>"
+        <button type="button" name="mnozenie" onclick="iloczyn()">*</button>"
+        <button type="button" name="dzielenie" onclick="iloraz()">/</button>"
+        <button type="button" name="potega" onclick="pot()">a^b</button>"
+    </form>
+    <p id="wynik"></p>
+
+    <script type="text/javascript">
+      function dodawanie(){
+        let a = parseFloat(document.getElementById('kalkulator').liczba1.value);
+        let b = parseFloat(document.getElementById('kalkulator').liczba2.value);
+        document.getElementById('wynik').innerHTML = a+b;
+      }
+      function odejmowanie(){
+        let a = parseFloat(document.getElementById('kalkulator').liczba1.value);
+        let b = parseFloat(document.getElementById('kalkulator').liczba2.value);
+        document.getElementById('wynik').innerHTML = a-b;
+      }
+      function iloczyn(){
+        let a = parseFloat(document.getElementById('kalkulator').liczba1.value);
+        let b = parseFloat(document.getElementById('kalkulator').liczba2.value);
+        document.getElementById('wynik').innerHTML = a*b;
+      }
+      function iloraz(){
+        let a = parseFloat(document.getElementById('kalkulator').liczba1.value);
+        let b = parseFloat(document.getElementById('kalkulator').liczba2.value);
+        document.getElementById('wynik').innerHTML = a/b;
+      }
+      function pot(){
+        let a = parseFloat(document.getElementById('kalkulator').liczba1.value);
+        let b = parseFloat(document.getElementById('kalkulator').liczba2.value);
+        document.getElementById('wynik').innerHTML = a**b;
+      }
+    </script>
+
+  </body>
+</html>

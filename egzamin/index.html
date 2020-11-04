@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="utf-8">
+    <title>Egzamin</title>
+  </head>
+  <body>
+    <h1>Oblicz koszt paliwa</h1>
+
+    <form id="formularz" onsubmit="return dodaj()">
+      Rodzaj paliwa: <input type="number" name="rp" value=""><br />
+      Ilość paliwa: <input type="number" name="ip" value=""><br />
+      <input type="submit" name="s" value="OBLICZ"><br />
+    </form>
+
+    <p id="wynik"></p>
+
+    <script type="text/javascript">
+      function dodaj(){
+        let r = document.getElementById('formularz').rp.value;
+        let i = document.getElementById('formularz').ip.value;
+        let cn = 0;
+
+        if(r == 1) {cp = 4;}
+        else if (r == 2) {cn = 3.5;}
+        else {cp = 0;}
+
+        var w = cp * ip;
+        document.getElementById("wynik").innerHTML = "koszt paliwa: zł";
+        return false;
+      }
+    </script>
+
+  </body>
+</html>
